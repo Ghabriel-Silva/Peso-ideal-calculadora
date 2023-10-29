@@ -17,7 +17,9 @@ const imc = calculaimc(peso, altura).toFixed(2)
 resultado.innerHTML = `${imc}`;
 
 condicaoresultado(imc)
+reload.style.display = 'inline-block'
 
+form.style.display = "none" //basicamente aqui o meu elemento form quando enviado some, isto porque defino o stylo do display como none ou seja, não sera enviado
 })
 };
 
