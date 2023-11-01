@@ -1,0 +1,16 @@
+/* Color Theme  sit */
+.Design-gráfico-1-hex { color: #DFF2E9; }
+.Design-gráfico-2-hex { color: #01401C; }
+.Design-gráfico-3-hex { color: #397352; }
+.Design-gráfico-4-hex { color: #84BF9E; }
+.Design-gráfico-5-hex { color: #CEF2DE; }
+
+
+
+/* Color Theme Sit 2  */
+.Seres---Branding-1-hex { color: #112619; }
+.Seres---Branding-2-hex { color: #23402A; }
+.Seres---Branding-3-hex { color: #7C8C5A; }
+.Seres---Branding-4-hex { color: #CFD989; }
+.Seres---Branding-5-hex { color: #EFF299; }
+

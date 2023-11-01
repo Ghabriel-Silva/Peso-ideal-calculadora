@@ -7,90 +7,97 @@
    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <h1 class="title">Peso ideal</h1>
-    <p class="paragrafo">Seja bem-vindo ao Peso Ideal! Aqui, ajudamos você a entender o seu Índice de Massa Corporal (IMC) e fornecemos orientações para alcançar um peso saudável.</p>
-    <h2 class="tiltle-imc">O que é o IMC?</h2>
-    <p class="imc-info">O IMC é uma medida que estima a quantidade de gordura corporal com base na sua altura e peso. Ele é amplamente utilizado para avaliar se uma pessoa está em um peso saudável, abaixo do peso, com excesso de peso ou obesa. Nosso IMC calculadora simples pode ajudá-lo a descobrir o seu IMC em apenas alguns passos.</p>
-
-    <form class="form">
-    <h2 class="title-form">Calculadora de IMC:</h2>
-    <label class="label-style" for="peso">Peso</label>
-	<input type='text' id='peso' class="peso" placeholder="80kg">
-
-    <label class="label-style" for="altura">Altura</label>
-	<input type='text' id='altura' class="altura"  placeholder="1.80">
-
-    <button class="button-calculo">Calcular</button>
-    </form>
-    <div  class="resultado"></div>
-    <div class="error-screen"></div>
-    <div class="condicao-resultado"> </div>
-
+    <main>
+        <header>
+            <h1 class="title">Peso ideal</h1>
+            <label class="switch">
+                <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
+                <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>
+                <input type="checkbox" class="input">
+                <span class="slider"></span>
+              </label>
+        </header>
+        <section class="container">
+            <form class="form">
+                <h2 class="title-form">Calculadora de IMC</h2>
+                <label class="label-style" for="peso">Peso</label>
+                    <input type='text' id='peso' class="peso" placeholder="80kg">
+                <label class="label-style" for="altura">Altura</label>
+                    <input type='text' id='altura' class="altura"  placeholder="1.80">
+                <button class="button-calculo">Calcular</button>
+            </form>
+            <img class="img-womans" src="assets/assets/img/people-health-vetor.png" alt="">
     
-    <div class="orientacao">
-        <p class="orientacao-text1">Seu IMC está abaixo de 18.5, o que pode indicar que você está abaixo do peso ideal.</p>
-        <p class="orientacao-text2">Dicas para Melhorar:</p>
-        <ol class="orientacao-list">
-            <li class="orientacao-list-1" >Consulte um médico ou nutricionista para avaliar a sua dieta e identificar possíveis deficiências nutricionais.</li>
-            <li class="orientacao-list-2">Aumente a ingestão de alimentos ricos em nutrientes, como proteínas, gorduras saudáveis e carboidratos complexos.</li>
-            <li class="orientacao-list-3">Adote uma rotina de exercícios moderados para ganhar massa muscular de maneira saudável.</li>
-        </ol>
-    </div>
+        </section>
 
+        <div class="infomacao">
+            <div  class="resultado"></div>
+            <div class="error-screen"></div>
+            <div class="condicao-resultado"> </div>
+        </div>
+            <article>
+                <div class="orientacao">
+                    <p class="orientacao-text1">Seu IMC está abaixo de 18.5, o que pode indicar que você está abaixo do peso ideal.</p>
+                    <p class="orientacao-text2">Dicas para Melhorar:</p>
+                    <ol class="orientacao-list">
+                        <li class="orientacao-list-1" >Consulte um médico ou nutricionista para avaliar a sua dieta e identificar possíveis deficiências nutricionais.</li>
+                        <li class="orientacao-list-2">Aumente a ingestão de alimentos ricos em nutrientes, como proteínas, gorduras saudáveis e carboidratos complexos.</li>
+                        <li class="orientacao-list-3">Adote uma rotina de exercícios moderados para ganhar massa muscular de maneira saudável.</li>
+                    </ol>
+                </div>
+                <div class="orientacaonormal">
+                    <p class="orientacaonormal-text1">Seu IMC está entre 18.5 e 24.9, o que é considerado saudável.</p>
+                    <p class="orientacaonormal-text2">Dicas para Manter:</p>
+                    <ol class="orientacaonormal-list">
+                        <li class="orientacaonormal-list1">Continue a manter uma dieta equilibrada e nutritiva.</li>
+                        <li class="orientacaonormal-list2">Mantenha-se fisicamente ativo com exercícios regulares.</li>
+                        <li class="orientacaonorma-list3">Faça check-ups médicos regulares para monitorar sua saúde.</li>
+                    </ol>
+                </div>
+                <div class="orientacaoexeco">
+                    <p class="orientacaoexeco-text1">Seu IMC está entre 25.0 e 29.9, indicando excesso de peso.</p>
+                    <p class="orientacaoexeco-text2">Dicas para Melhorar:</p>
+                    <ol class="orientacaoexeco-list" >
+                        <li class="orientacaoexeco-list1" >Ajuste sua dieta para reduzir a ingestão de calorias. Priorize alimentos ricos em nutrientes e evite alimentos processados e ricos em açúcar.</li>
+                        <li class="orientacaoexeco-list2">Aumente a atividade física, incluindo exercícios aeróbicos e treinamento de força.</li>
+                        <li class="orientacaoexeco list3">Considere a orientação de um nutricionista ou treinador pessoal.</li>
+                    </ol>
+                </div>
+                <div class="orientacaoexeco1">
+                    <p class="orientacaoexeco1-text1"> Seu IMC está entre 30.0 e 34.9, indicando obesidade de grau 1.</p>
+                    <p class="orientacaoexeco1-text2">Dicas para Melhorar:</p>
+                    <ol class="orientacaoexeco1-list">
+                        <li class="orientacaoexeco1-list1">Consulte um médico para avaliar a saúde geral e possíveis riscos associados à obesidade.</li>
+                        <li class="orientacaoexeco1-list2">Adote uma dieta controlada em calorias e rica em nutrientes.</li>
+                        <li class="orientacaoexeco1-list3">Pratique exercícios regularmente e considere a possibilidade de trabalhar com um personal trainer.</li>
+                    </ol>
+                </div>
+                <div class="orientacaoexeco2">
+                    <p class="orientacaoexeco-text1">Seu IMC está entre 35.0 e 39.9, indicando obesidade de grau 2.</p>
+                    <p class="orientacaoexeco2-text2">Dicas para Melhorar:</p>
+                    <ol >
+                        <li class="orientacaoexeco2-list1">Consulte um médico ou especialista em obesidade para um plano de tratamento personalizado.</li>
+                        <li class="orientacaoexeco2-list2">Considere a possibilidade de cirurgia bariátrica, se recomendado por um profissional de saúde.</li>
+                        <li class="orientacaoexeco2-list3">Faça mudanças significativas na dieta e no estilo de vida, incluindo exercícios regulares e controle rigoroso da ingestão calórica.</li>
+                    </ol>
+                </div>
+                <div class="orientacaoexeco3">
+                    <p  class="orientacaoexeco3-text1"> Seu IMC é igual ou superior a 40, indicando obesidade mórbida.</p>
+                    <p  class="orientacaoexeco3-text2">Dicas para Melhorar:</p>
+                    <ol  class="orientacaoexeco3-list">
+                        <li  class="orientacaoexeco3-list1">Procure ajuda médica urgente para tratar problemas de saúde graves associados à obesidade.</li>
+                        <li  class="orientacaoexeco3-list2">Avalie todas as opções de tratamento, incluindo cirurgia, sob a supervisão de especialistas em obesidade.</li>
+                        <li  class="orientacaoexeco3-list3">Comprometa-se a fazer mudanças de estilo de vida substanciais e sustentáveis.</li>
+                    </ol>
+                </div>
 
-    <div class="orientacaonormal">
-        <p class="orientacaonormal-text1">Seu IMC está entre 18.5 e 24.9, o que é considerado saudável.</p>
-        <p class="orientacaonormal-text2">Dicas para Manter:</p>
-        <ol class="orientacaonormal-list">
-            <li class="orientacaonormal-list1">Continue a manter uma dieta equilibrada e nutritiva.</li>
-            <li class="orientacaonormal-list2">Mantenha-se fisicamente ativo com exercícios regulares.</li>
-            <li class="orientacaonorma-list3">Faça check-ups médicos regulares para monitorar sua saúde.</li>
-        </ol>
-    </div>
-
-
-    <div class="orientacaoexeco">
-        <p class="orientacaoexeco-text1">Seu IMC está entre 25.0 e 29.9, indicando excesso de peso.</p>
-        <p class="orientacaoexeco-text2">Dicas para Melhorar:</p>
-        <ol class="orientacaoexeco-list" >
-            <li class="orientacaoexeco-list1" >Ajuste sua dieta para reduzir a ingestão de calorias. Priorize alimentos ricos em nutrientes e evite alimentos processados e ricos em açúcar.</li>
-            <li class="orientacaoexeco-list2">Aumente a atividade física, incluindo exercícios aeróbicos e treinamento de força.</li>
-            <li class="orientacaoexeco list3">Considere a orientação de um nutricionista ou treinador pessoal.</li>
-        </ol>
-    </div>
-
-    <div class="orientacaoexeco1">
-        <p class="orientacaoexeco1-text1"> Seu IMC está entre 30.0 e 34.9, indicando obesidade de grau 1.</p>
-        <p class="orientacaoexeco1-text2">Dicas para Melhorar:</p>
-        <ol class="orientacaoexeco1-list">
-            <li class="orientacaoexeco1-list1">Consulte um médico para avaliar a saúde geral e possíveis riscos associados à obesidade.</li>
-            <li class="orientacaoexeco1-list2">Adote uma dieta controlada em calorias e rica em nutrientes.</li>
-            <li class="orientacaoexeco1-list3">Pratique exercícios regularmente e considere a possibilidade de trabalhar com um personal trainer.</li>
-        </ol>
-    </div>
-
-    <div class="orientacaoexeco2">
-        <p class="orientacaoexeco-text1">Seu IMC está entre 35.0 e 39.9, indicando obesidade de grau 2.</p>
-        <p class="orientacaoexeco2-text2">Dicas para Melhorar:</p>
-        <ol >
-            <li class="orientacaoexeco2-list1">Consulte um médico ou especialista em obesidade para um plano de tratamento personalizado.</li>
-            <li class="orientacaoexeco2-list2">Considere a possibilidade de cirurgia bariátrica, se recomendado por um profissional de saúde.</li>
-            <li class="orientacaoexeco2-list3">Faça mudanças significativas na dieta e no estilo de vida, incluindo exercícios regulares e controle rigoroso da ingestão calórica.</li>
-        </ol>
-    </div>
-
-
-    <div class="orientacaoexeco3">
-        <p  class="orientacaoexeco3-text1"> Seu IMC é igual ou superior a 40, indicando obesidade mórbida.</p>
-        <p  class="orientacaoexeco3-text2">Dicas para Melhorar:</p>
-        <ol  class="orientacaoexeco3-list">
-            <li  class="orientacaoexeco3-list1">Procure ajuda médica urgente para tratar problemas de saúde graves associados à obesidade.</li>
-            <li  class="orientacaoexeco3-list2">Avalie todas as opções de tratamento, incluindo cirurgia, sob a supervisão de especialistas em obesidade.</li>
-            <li  class="orientacaoexeco3-list3">Comprometa-se a fazer mudanças de estilo de vida substanciais e sustentáveis.</li>
-        </ol>
-    </div>
-
-    <button class="reload">Novo teste</button>
+            </article>
+            <button class="reload">Novo teste</button>
+            <div class="imc-info">
+                <h2 class="tiltle-imc">O que é o IMC?</h2>
+                <p class="imc-info">O IMC é uma medida que estima a quantidade de gordura corporal com base na sua altura e peso. Ele é amplamente utilizado para avaliar se uma pessoa está em um peso saudável, abaixo do peso, com excesso de peso ou obesa. Nosso IMC calculadora simples pode ajudá-lo a descobrir o seu IMC em apenas alguns passos.</p>
+            </div>
+    </main>
 </body>
 <script src="js/index.js"></script>
 </html> 

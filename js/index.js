@@ -125,3 +125,51 @@ function mostraorientacao(imc) {
         orientacaoexeco3.style.display = 'inline-block';
     }
 }
+
+
+
+/*Claro, aqui está um resumo simplificado do que o código JavaScript faz:
+
+1. Ele aguarda o documento HTML ser completamente carregado.
+2. Obtém referências para o botão de alternância (checkbox) e o elemento `<body>` da página.
+3. Define uma função chamada `setTheme` para alternar entre os temas claro e escuro.
+4. Adiciona um ouvinte de evento ao botão de alternância para chamar `setTheme` quando o botão é clicado No contexto do código JavaScript, o ouvinte de evento "change" está associado a um elemento de entrada do tipo checkbox com a classe "input" (o botão de alternância). Quando o usuário clica no botão de alternância para mudar entre temas claro e escuro, o evento "change" é acionado. Isso, por sua vez, chama a função setTheme, que atualiza o tema da página com base no estado atual do botão de alternância..
+5. Na primeira execução, ele verifica o estado do botão e aplica o tema escuro ou claro com base nisso.
+6. Sempre que o botão de alternância é alterado (marcado/desmarcado), ele atualiza o tema da página.*/
+
+document.addEventListener("DOMContentLoaded", function () {
+    const switchInput = document.querySelector(".input");
+    const body = document.body;
+  
+    // Função para alternar o tema
+    function setTheme(isDark) {
+      if (isDark) {
+        // Tema escuro
+        body.classList.add("dark-theme");
+        switchInput.checked = true;
+      } else {
+        // Tema claro
+        body.classList.remove("dark-theme");
+        switchInput.checked = false;
+      }
+    }
+  
+    // Adiciona um ouvinte de evento para alterar o tema quando o botão é clicado
+    switchInput.addEventListener("change", function () {
+      // Armazena a preferência do usuário no localStorage
+      localStorage.setItem("darkTheme", switchInput.checked);
+      setTheme(switchInput.checked);
+    });
+  
+    // Obtém a preferência salva no localStorage (se houver)
+    const storedTheme = localStorage.getItem("darkTheme");
+    if (storedTheme !== null) {
+      setTheme(storedTheme === "true"); // Converte a string para um valor booleano
+    } else {
+      // Se nenhuma preferência for encontrada, configure o tema com base no estado inicial do botão
+      setTheme(switchInput.checked);
+    }
+  });
+  
+
+  
