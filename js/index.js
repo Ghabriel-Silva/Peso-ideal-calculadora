@@ -1,6 +1,7 @@
 // Seleciona o formulário e o botão de recarregar
 const form = document.querySelector(".form");
 const reload = document.querySelector(".reload");
+const articleinfo = document.querySelector('.article-info');
 
 // Função responsável por evitar o envio das informações e executar as funções criadas abaixo
 function notsubmit() {
@@ -32,6 +33,9 @@ function notsubmit() {
 
         // Oculta o formulário
         form.style.display = "none";
+        
+        //oculta as informações do artcle 
+        articleinfo.style.display = 'inline-block';
     });
 }
 

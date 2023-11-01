@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Peso ideal</title>
    <link rel="stylesheet" href="css/index.css">
 </head>
@@ -19,23 +23,19 @@
         </header>
         <section class="container">
             <form class="form">
-                <h2 class="title-form">Calculadora de IMC</h2>
+                <h2 id="title-form">Calculadora de IMC</h2>
                 <label class="label-style" for="peso">Peso</label>
                     <input type='text' id='peso' class="peso" placeholder="80kg">
                 <label class="label-style" for="altura">Altura</label>
                     <input type='text' id='altura' class="altura"  placeholder="1.80">
                 <button class="button-calculo">Calcular</button>
             </form>
-            <img class="img-womans" src="assets/assets/img/people-health-vetor.png" alt="">
-    
-        </section>
-
-        <div class="infomacao">
-            <div  class="resultado"></div>
-            <div class="error-screen"></div>
-            <div class="condicao-resultado"> </div>
-        </div>
-            <article>
+            <article  class="article-info">
+                <div class="infomacao">
+                    <div  class="resultado"></div>
+                    <div class="error-screen"></div>
+                    <div class="condicao-resultado"> </div>
+                </div>
                 <div class="orientacao">
                     <p class="orientacao-text1">Seu IMC está abaixo de 18.5, o que pode indicar que você está abaixo do peso ideal.</p>
                     <p class="orientacao-text2">Dicas para Melhorar:</p>
@@ -90,13 +90,11 @@
                         <li  class="orientacaoexeco3-list3">Comprometa-se a fazer mudanças de estilo de vida substanciais e sustentáveis.</li>
                     </ol>
                 </div>
-
+                 <button class="reload">Novo teste</button>
             </article>
-            <button class="reload">Novo teste</button>
-            <div class="imc-info">
-                <h2 class="tiltle-imc">O que é o IMC?</h2>
-                <p class="imc-info">O IMC é uma medida que estima a quantidade de gordura corporal com base na sua altura e peso. Ele é amplamente utilizado para avaliar se uma pessoa está em um peso saudável, abaixo do peso, com excesso de peso ou obesa. Nosso IMC calculadora simples pode ajudá-lo a descobrir o seu IMC em apenas alguns passos.</p>
-            </div>
+            <img class="img-womans" src="assets/assets/img/people-health-vetor.png" alt="">
+
+        </section>
     </main>
 </body>
 <script src="js/index.js"></script>
