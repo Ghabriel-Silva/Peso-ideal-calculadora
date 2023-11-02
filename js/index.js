@@ -9,8 +9,8 @@ function notsubmit() {
         event.preventDefault(); // Evita o envio do formulário
 
         // Obtém o peso e a altura inseridos pelo usuário
-        const peso = parseFloat(document.querySelector('.peso').value);
-        const altura = parseFloat(document.querySelector('.altura').value);
+        const peso = parseFloat(convertepontoemvirgula(document.querySelector('.peso').value));
+        const altura = parseFloat(convertepontoemvirgula(document.querySelector('.altura').value));
 
         // Seleciona o elemento de resultado
         const resultado = document.querySelector('.resultado');
@@ -20,7 +20,7 @@ function notsubmit() {
 
         // Calcula o IMC e exibe o resultado
         const imc = calculaimc(peso, altura).toFixed(2);
-        resultado.innerHTML = `Resultado: ${imc}`;
+        resultado.innerHTML = `IMC: ${imc}`;
 
         // Mostra a condição com base no IMC
         condicaoresultado(imc);
@@ -30,16 +30,20 @@ function notsubmit() {
 
         // Torna o botão de recarregar visível novamente
         reload.style.display = 'inline-block';
+        
 
         // Oculta o formulário
         form.style.display = "none";
         
         //oculta as informações do artcle 
-        articleinfo.style.display = 'inline-block';
+        articleinfo.style.display = 'flex';
+        articleinfo.style.flexDirection = 'column'; 
+        articleinfo.style.justifyContent = 'center';
+        articleinfo.style.alignItems = 'center';
     });
 }
 
-// Função para recarregar a página quando o botão de recarregar é clicado
+// Função para recarregar a página quando o botão de recarregar é clikado
 function recarregar() {
     reload.addEventListener('click', function() {
         location.reload();
@@ -49,6 +53,14 @@ function recarregar() {
 // Chama as funções de recarregar e evitar envio do formulário
 recarregar();
 notsubmit();
+
+
+
+//função para converter ponto em virgula  
+function convertepontoemvirgula(valor){
+    return valor.replace(',','.') //no caso esta parte do código subtitui o valor de virgula por ponto, usando  o método replace recebe dois argumentos. O primeiro argumento é o valor a ser substituído (neste caso, a vírgula), e o segundo argumento é o valor pelo qual ele será substituído (neste caso, o ponto).
+
+}
 
 // Função responsável por calcular o IMC com base no peso e altura fornecidos
 function calculaimc(a, b) {
@@ -72,7 +84,7 @@ function isvalid(a, b) {
 
         // Exibe uma mensagem de erro
         const errorscreen = document.querySelector('.error-screen');
-        errorscreen.innerHTML = `Por favor, tente novamente e digite números válidos.`;
+        errorscreen.innerHTML = `Por favor, tente novamente ou digite números válidos.`;
     }
 }
 
