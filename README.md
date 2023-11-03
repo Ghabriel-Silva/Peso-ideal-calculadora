@@ -1,10 +1,9 @@
 # Calculadora de IMC
-## Licença
-
-Este projeto é licenciado sob a [Nome da Sua Licença](LINK PARA O ARQUIVO LICENSE) - Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-![Calculadora de IMC](assets/assets/img/escudo.png)
-
+##Modelo papge desktop
+![Modelo page](assets/assets/img/IMG-layout.png)
+##Modelo page mobile
+![Modelo page](assets/assets/img/img-mobile.png)
+ 
 Este é um projeto de uma calculadora de IMC (Índice de Massa Corporal) simples. O IMC é uma medida que avalia o peso corporal de uma pessoa em relação à sua altura, indicando se a pessoa está abaixo do peso, com peso normal, sobrepeso ou obesa.
 
 ## Tecnologias Utilizadas
@@ -30,8 +29,6 @@ Este é um projeto de uma calculadora de IMC (Índice de Massa Corporal) simples
 ## Recarregar a Página
 Se desejar recalcular seu IMC ou inserir novos valores, você pode clicar no botão "Voltar" para recarregar a página e começar novamente.
 
-![Equipe de Profissionais de Saúde](assets/assets/img/Health%20professional%20team-pana.png)
-
 ### Tema Claro/Escuro
 Você pode alternar entre o tema claro e escuro clicando no ícone do sol/lua na parte superior da página.
 
@@ -45,4 +42,5 @@ Se você deseja contribuir com o projeto, siga estas etapas:
 3. Faça commit das suas mudanças: `git commit -m 'Adicione uma nova feature'`
 4. Faça push para a branch: `git push origin minha-feature`
 5. Envie um pull request.
-
+##autor
+Gabriel da Silva Ribeiro 
