@@ -10,8 +10,6 @@ body{
     align-items: center;
     height: 100vh;
     background-color: #d5edff;
-   
-  
 }
 /*estilização do main */
 main{
@@ -205,14 +203,12 @@ text-align: center;
 .img-womans{
     width: 550px;
 }
-
 .article-info{
   display: none;
   height:auto;
   width: 400px;
   background-color:#7169ff;
   border-radius: 25px;
-
 }
 
 /*Define as cores do  resultado */
@@ -237,8 +233,6 @@ text-align: center;
 .nivel7{
     color: rgb(255, 21, 21);
 }
-
-
 .orientacao, .orientacaonormal, .orientacaoexeco, .orientacaoexeco1, .orientacaoexeco2, .orientacaoexeco3{
 display: none; 
 }
@@ -355,4 +349,66 @@ display: none;
 .dark-theme{
     background-color: rgb(33, 33, 33);
     color:white;
+}
+
+/*Parte da responsividade, mobile*/
+@media (max-width:470px) and (min-width:280px){
+ 
+  .img-womans{
+    width: 250px;
+  }
+  .container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85vh;
+  
+}
+.form{
+  width: 250px;
+  height: 350px;
+}
+#title-form{
+  text-align: center;
+}
+.article-info{
+  width: 280px;
+  height: auto;
+  margin-top: 200px;
+}
+.error-screen{
+  width: 250px;
+  padding-top: 50px;
+}
+}
+/*Responsividade para tablets*/
+@media (max-width:950px) and (min-width:471px){
+  .img-womans{
+    width: 400px;
+  }
+  .container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+  
+}
+.form{
+  width: 400px;
+  height: 350px;
+}
+#title-form{
+  text-align: center;
+}
+.article-info{
+  width: 400px;
+  height: auto;
+  margin-top: 200px;
+}
+.error-screen{
+  width: 250px;
+  padding-top: 50px;
+}
 }
