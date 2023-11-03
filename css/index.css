@@ -9,20 +9,16 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #d5edff;
    
   
 }
-
-
 /*estilização do main */
 main{
     width: 98vw;
     height: 96vh;
     border-radius: 20px;
 }
-
-
-
 
 /*Estilização do header*/
 header{
@@ -31,12 +27,18 @@ header{
     align-items: center;
     justify-content: space-between;
     height:50px;
-    border-radius: 20px 20px 0 0 ;
 }
 .title{
     margin-left:10px;
     font-size: 25px;
-    font-weight:bolder;
+    font-weight:bold;
+    color:#7169FF;
+}
+.title::before{
+  content: 'P';
+  font-size:30px ;
+  font-weight: bolder;
+    color:#7169FF;
 }
 .container{
     display:flex;
@@ -54,8 +56,8 @@ header{
     justify-content: center;
     gap:20px;
     align-items: center;
-    background-color: #675EFF;
     border-radius: 25px;
+    background-color:#7169ff;
 }
 #title-form{
   font-size: 30px;
@@ -114,7 +116,7 @@ transform:scale(0.95);
   box-shadow: 2px 2px 3px 0px black;
  }
  .button-calculo:hover{
-  background-color:#88cdf0;
+  background-color:#9680f7;
   transform:scale(1.1);
  }
  
@@ -131,7 +133,7 @@ transform:scale(0.95);
 display: flex;
 align-items: center;
 text-align: center;
-color: rgb(241, 83, 83);
+color: black;
 font-weight: bolder;
 border-radius: 25px  10px 25px 10px;
 height:100px;
@@ -139,6 +141,7 @@ font-size:18px;
 }
 .resultado{
  font-size: 20px;
+ padding-top:20px ;
 }
 .condicao-resultado{
   font-size: 20px;
@@ -166,7 +169,7 @@ text-align: center;
   flex-direction: column;
   font-size: 18px;
   row-gap: 10px;
-  padding-bottom: 50px;
+  padding: 5px 10px ;
   list-style: none;
   counter-reset: item;
 }
@@ -186,25 +189,30 @@ text-align: center;
   border: none;
   font-size:17px;
   font-weight: 600;
-  background-color: #675EFF;
+  background-color: rgb(255, 255, 255);
   transition: linear ;
   cursor: pointer;
   box-shadow: 2px 2px 3px 0px black;
   text-align: center;
+  margin: 30px;
 }
 .reload:hover{
-  background-color:#b8d9e9;
+  background-color:#9680f7;
   transform:scale(1.1);
  }
 
 /*edita a imagem*/
 .img-womans{
-    width: 600px;
+    width: 550px;
 }
 
 .article-info{
   display: none;
+  height:auto;
   width: 400px;
+  background-color:#7169ff;
+  border-radius: 25px;
+
 }
 
 /*Define as cores do  resultado */
@@ -258,7 +266,7 @@ display: none;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #73C0FC;
+  background-color: #7169FF;
   transition: .4s;
   border-radius: 30px;
 }
@@ -286,7 +294,7 @@ display: none;
 }
 
 .moon svg {
-  fill: #73C0FC;
+  fill: #7169FF;
   position: absolute;
   top: 5px;
   left: 5px;
