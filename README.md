@@ -1,7 +1,7 @@
 # Calculadora de IMC
-# Modelo papge desktop
+## Modelo papge desktop
 ![Modelo page](assets/assets/img/IMG-layout.png)
-# Modelo page mobile
+## Modelo page mobile
 ![Modelo page](assets/assets/img/img-mobile.png)
  
 Este é um projeto de uma calculadora de IMC (Índice de Massa Corporal) simples. O IMC é uma medida que avalia o peso corporal de uma pessoa em relação à sua altura, indicando se a pessoa está abaixo do peso, com peso normal, sobrepeso ou obesa.
@@ -42,5 +42,5 @@ Se você deseja contribuir com o projeto, siga estas etapas:
 3. Faça commit das suas mudanças: `git commit -m 'Adicione uma nova feature'`
 4. Faça push para a branch: `git push origin minha-feature`
 5. Envie um pull request.
-# autor
+## autor
 Gabriel da Silva Ribeiro 
