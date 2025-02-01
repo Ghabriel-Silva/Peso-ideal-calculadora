@@ -16,7 +16,9 @@ function notsubmit() {
         const resultado = document.querySelector('.resultado');
 
         // Verifica se os números inseridos são válidos
-        isvalid(peso, altura);
+        if (!isvalid(peso, altura)) {
+            return; // Interrompe se os valores não forem válidos
+        }
 
         // Calcula o IMC e exibe o resultado
         const imc = calculaimc(peso, altura).toFixed(2);
@@ -30,20 +32,19 @@ function notsubmit() {
 
         // Torna o botão de recarregar visível novamente
         reload.style.display = 'inline-block';
-        
 
         // Oculta o formulário
         form.style.display = "none";
-        
-        //oculta as informações do artcle 
+
+        // Oculta as informações do artigo
         articleinfo.style.display = 'flex';
-        articleinfo.style.flexDirection = 'column'; 
+        articleinfo.style.flexDirection = 'column';
         articleinfo.style.justifyContent = 'center';
         articleinfo.style.alignItems = 'center';
     });
 }
 
-// Função para recarregar a página quando o botão de recarregar é clikado
+// Função para recarregar a página quando o botão de recarregar é clicado
 function recarregar() {
     reload.addEventListener('click', function() {
         location.reload();
@@ -54,12 +55,9 @@ function recarregar() {
 recarregar();
 notsubmit();
 
-
-
-//função para converter ponto em virgula  
-function convertepontoemvirgula(valor){
-    return valor.replace(',','.') //no caso esta parte do código subtitui o valor de virgula por ponto, usando  o método replace recebe dois argumentos. O primeiro argumento é o valor a ser substituído (neste caso, a vírgula), e o segundo argumento é o valor pelo qual ele será substituído (neste caso, o ponto).
-
+// Função para converter ponto em vírgula
+function convertepontoemvirgula(valor) {
+    return valor.replace(',', '.'); // Substitui a vírgula por ponto
 }
 
 // Função responsável por calcular o IMC com base no peso e altura fornecidos
@@ -68,24 +66,19 @@ function calculaimc(a, b) {
 }
 
 // Função responsável por verificar se os números inseridos são válidos
-function isvalid(a, b) {
-    if (!isNaN(a) && !isNaN(b)) {
-        // Números válidos
-    } else {
-        // Números inválidos
-
-        // Oculta a condição
-        const condicaoresultado = document.querySelector('.condicao-resultado');
+function isvalid(peso, altura) {
+    const condicaoresultado = document.querySelector('.condicao-resultado');
+    const resultado = document.querySelector('.resultado');
+    const errorscreen = document.querySelector('.error-screen');
+    
+    // Verifica se o peso e a altura são números válidos
+    if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
         condicaoresultado.style.display = "none";
-
-        // Oculta o resultado do IMC
-        const resultado = document.querySelector('.resultado');
         resultado.style.display = "none";
-
-        // Exibe uma mensagem de erro
-        const errorscreen = document.querySelector('.error-screen');
-        errorscreen.innerHTML = `Por favor, tente novamente ou digite números válidos.`;
+        errorscreen.innerHTML = `Por favor, insira valores válidos de peso e altura.`;
+        return false;
     }
+    return true;
 }
 
 // Função responsável por determinar a condição com base no valor do IMC
@@ -118,74 +111,61 @@ function condicaoresultado(imc) {
 // Função responsável por mostrar as orientações com base no valor do IMC
 function mostraorientacao(imc) {
     const orientacao = document.querySelector('.orientacao');
-    const orientacaonormal = document.querySelector('.orientacaonormal');
-    const orientacaoexeco = document.querySelector('.orientacaoexeco');
-    const orientacaoexeco1 = document.querySelector('.orientacaoexeco1');
-    const orientacaoexeco2 = document.querySelector('.orientacaoexeco2');
-    const orientacaoexeco3 = document.querySelector('.orientacaoexeco3');
+    const orientacoes = {
+        normal: document.querySelector('.orientacaonormal'),
+        execo: document.querySelector('.orientacaoexeco'),
+        execo1: document.querySelector('.orientacaoexeco1'),
+        execo2: document.querySelector('.orientacaoexeco2'),
+        execo3: document.querySelector('.orientacaoexeco3')
+    };
 
-    if (isNaN(imc)) {
-        // Se o IMC não for um número válido, saia da função
-        return;
-    } else if (imc < 18.5) {
+    // Esconde todas as orientações
+    Object.values(orientacoes).forEach(element => element.style.display = 'none');
+
+    // Exibe a orientação correspondente
+    if (imc < 18.5) {
         orientacao.style.display = 'inline-block';
     } else if (imc >= 18.5 && imc <= 24.9) {
-        orientacaonormal.style.display = 'inline-block';
+        orientacoes.normal.style.display = 'inline-block';
     } else if (imc >= 25 && imc <= 29.9) {
-        orientacaoexeco.style.display = 'inline-block';
+        orientacoes.execo.style.display = 'inline-block';
     } else if (imc >= 30 && imc <= 34.9) {
-        orientacaoexeco1.style.display = 'inline-block';
+        orientacoes.execo1.style.display = 'inline-block';
     } else if (imc >= 35 && imc < 40) {
-        orientacaoexeco2.style.display = 'inline-block';
+        orientacoes.execo2.style.display = 'inline-block';
     } else {
-        orientacaoexeco3.style.display = 'inline-block';
+        orientacoes.execo3.style.display = 'inline-block';
     }
 }
 
-
-
-/*Claro, aqui está um resumo simplificado do que o código JavaScript faz:
-
-1. Ele aguarda o documento HTML ser completamente carregado.
-2. Obtém referências para o botão de alternância (checkbox) e o elemento `<body>` da página.
-3. Define uma função chamada `setTheme` para alternar entre os temas claro e escuro.
-4. Adiciona um ouvinte de evento ao botão de alternância para chamar `setTheme` quando o botão é clicado No contexto do código JavaScript, o ouvinte de evento "change" está associado a um elemento de entrada do tipo checkbox com a classe "input" (o botão de alternância). Quando o usuário clica no botão de alternância para mudar entre temas claro e escuro, o evento "change" é acionado. Isso, por sua vez, chama a função setTheme, que atualiza o tema da página com base no estado atual do botão de alternância..
-5. Na primeira execução, ele verifica o estado do botão e aplica o tema escuro ou claro com base nisso.
-6. Sempre que o botão de alternância é alterado (marcado/desmarcado), ele atualiza o tema da página.*/
-
+// Função para alternar o tema claro e escuro
 document.addEventListener("DOMContentLoaded", function () {
     const switchInput = document.querySelector(".input");
     const body = document.body;
-  
+
     // Função para alternar o tema
     function setTheme(isDark) {
-      if (isDark) {
-        // Tema escuro
-        body.classList.add("dark-theme");
-        switchInput.checked = true;
-      } else {
-        // Tema claro
-        body.classList.remove("dark-theme");
-        switchInput.checked = false;
-      }
+        if (isDark) {
+            body.classList.add("dark-theme");
+            switchInput.checked = true;
+        } else {
+            body.classList.remove("dark-theme");
+            switchInput.checked = false;
+        }
     }
-  
+
     // Adiciona um ouvinte de evento para alterar o tema quando o botão é clicado
     switchInput.addEventListener("change", function () {
-      // Armazena a preferência do usuário no localStorage
-      localStorage.setItem("darkTheme", switchInput.checked);
-      setTheme(switchInput.checked);
+        // Armazena a preferência do usuário no localStorage
+        localStorage.setItem("darkTheme", switchInput.checked);
+        setTheme(switchInput.checked);
     });
-  
+
     // Obtém a preferência salva no localStorage (se houver)
     const storedTheme = localStorage.getItem("darkTheme");
     if (storedTheme !== null) {
-      setTheme(storedTheme === "true"); // Converte a string para um valor booleano
+        setTheme(storedTheme === "true"); // Converte a string para um valor booleano
     } else {
-      // Se nenhuma preferência for encontrada, configure o tema com base no estado inicial do botão
-      setTheme(switchInput.checked);
+        setTheme(switchInput.checked); // Se nenhuma preferência for encontrada, configure o tema com base no estado inicial do botão
     }
-  });
-  
-
-  
+});
